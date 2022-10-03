@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+
 const Sidebar = () => {
     const router = useRouter();
 
@@ -27,10 +28,15 @@ const Sidebar = () => {
                         <a className="text-white block">Platform</a>
                     </Link>
                 </li>
+                <li className={router.pathname === '/master' ? 'bg-blue-800 p-2' : 'p-2'}>
+                    <Link href="/master">
+                        <a className="text-white block">Master</a>
+                    </Link>
+                </li>
             </nav>
 
             {/* <div className="sm:mt-10">
-                <p className="text-white text-2xl font-black">Customer</p>
+                <p className="text-white text-2xl font-black">Mastsers</p>
             </div>
             <nav className="mt-5 list-none">
                 <li className={router.pathname === '/bestSellers' ? 'bg-blue-800 p-2' : 'p-2'}>

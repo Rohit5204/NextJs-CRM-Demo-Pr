@@ -21,7 +21,7 @@
 // export default Header;
 import { useRouter } from "next/router";
 import Link from "next/link";
-
+import { AiFillBank } from "react-icons/ai";
 const navigationRoutes = ["home", "about", "Pricing", "Contact"];
 
 export default function Navbar() {
@@ -30,7 +30,7 @@ export default function Navbar() {
         <nav className="nav_container">
             <input
                 placeholder=" Search Box....."
-                style={{ height: '40px', width: '380px', borderRadius: "5px" }}
+                style={{ height: '40px', width: '380px', borderRadius: "5px"}}
                 title='Search bar'
             />
             {navigationRoutes.map((singleRoute) => {
@@ -43,7 +43,7 @@ export default function Navbar() {
                     />
                 );
             })}
-
+            <h3> <AiFillBank /></h3>
             <button
                 type="button"
                 className="bg-blue-800 w-full sm:w-auto font-bold uppercase text-xs rounded py-1 px-2 text-white shadow-md">
