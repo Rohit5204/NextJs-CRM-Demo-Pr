@@ -108,13 +108,13 @@ export default class Edit extends React.Component {
           </Row>
           <div className="col-md-12 text-center">
             {/* <Link href="/userMaster"> */}
-              <Button
-                variant="primary"
-                type="submit"
-                className="btn btn-primary mb-2"
-              >
-                Update
-              </Button>
+            <Button
+              variant="primary"
+              type="submit"
+              className="btn btn-primary mb-2"
+            >
+              Update
+            </Button>
             {/* </Link> */}
             &nbsp;
             <Link to="/">
