@@ -1,69 +1,46 @@
-// import React, { useState, useEffect } from 'react';
-// const Header = () => {
-//     return (
-//         <header className="sm:flex sm:justify-between mb-6">
-//             {/* <p className="mr-2 mb-5 lg:mb-0">Welcome: </p> */}
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-//             <a>Home</a>
-//             <a>Pricing</a>
-//             <a>LogOut</a>
-
-
-//             <button
-//                 type="button"
-//                 className="bg-blue-800 w-full sm:w-auto font-bold uppercase text-xs rounded py-1 px-2 text-white shadow-md">
-//                 Log out
-//             </button>
-//         </header>
-//     );
-// };
-
-// export default Header;
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { AiFillBank } from "react-icons/ai";
-const navigationRoutes = ["home", "about", "Pricing", "Contact"];
-
-export default function Navbar() {
-    const router = useRouter();
+function NavScrollExample() {
     return (
-        <nav className="nav_container">
-            <input
-                placeholder=" Search Box....."
-                style={{ height: '40px', width: '380px', borderRadius: "5px"}}
-                title='Search bar'
-            />
-            {navigationRoutes.map((singleRoute) => {
-                return (
-                    <NavigationLink
-                        key={singleRoute}
-                        href={`/${singleRoute}`}
-                        text={singleRoute}
-                        router={router}
-                    />
-                );
-            })}
-            <h3> <AiFillBank /></h3>
-            <button
-                type="button"
-                className="bg-blue-800 w-full sm:w-auto font-bold uppercase text-xs rounded py-1 px-2 text-white shadow-md">
-                Log out
-            </button>
-        </nav>
-
+        <Navbar bg="light" expand="lg">
+            <Container fluid>
+                <Navbar.Brand>MENTOR PARTH</Navbar.Brand>
+                <Navbar.Toggle aria-controls="navbarScroll" />
+                <Navbar.Collapse id="navbarScroll">
+                    <Nav
+                        className="me-auto my-2 my-lg-0"
+                        style={{ maxHeight: '100px' }}
+                        navbarScroll
+                    >
+                    </Nav>
+                    <Form className="d-flex">
+                        <Form.Control
+                            type="search"
+                            placeholder="Search"
+                            className="me-2"
+                            aria-label="Search"
+                        />
+                        <Button variant="outline-success">Search</Button>
+                    </Form>
+                    <NavDropdown title="Link" id="navbarScrollingDropdown">
+                        <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                        <NavDropdown.Item href="#action4">
+                            Another action
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item href="#action5">
+                            Something else here
+                        </NavDropdown.Item>
+                    </NavDropdown>
+                </Navbar.Collapse>
+            </Container>
+        </Navbar>
     );
 }
 
-function NavigationLink({ href, text, router }) {
-    const isActive = router.asPath === (href === "/home" ? "/" : href);
-    return (
-        <Link href={href === "/home" ? "/" : href} passHref>
-            <a
-                href={href === "/home" ? "/" : href}
-                className={`${isActive && "nav_item_active"} nav_item`}>
-                <span>{text} </span>
-            </a>
-        </Link>
-
-    );
-}
+export default NavScrollExample;

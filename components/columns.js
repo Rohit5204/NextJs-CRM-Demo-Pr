@@ -14,16 +14,16 @@ export const COLUMNS = [
     // Filter: ColumnFilter
   },
   {
-    Header: 'Toatl Count',
-    accessor: 'count',
+    Header: 'Assign',
+    accessor: 'assign',
     // Filter: ColumnFilter
   },
   {
-    Header: 'Date',
-    accessor: 'date',
-    Cell: ({ value }) => {
-      return format(new Date(value), 'dd/MM/yyyy');
-    }
+    Header: 'Status',
+    accessor: 'status',
+    // Cell: ({ value }) => {
+    //   return format(new Date(value), 'dd/MM/yyyy');
+    // }
     // Filter: ColumnFilter
   },
 ];

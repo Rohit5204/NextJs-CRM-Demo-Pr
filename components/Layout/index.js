@@ -10,6 +10,7 @@ const Layout = (props) => {
     return (
         <>
             <Head>
+                
                 <title>Mentor Parth </title>
                 <link
                     rel="stylesheet"
@@ -22,22 +23,23 @@ const Layout = (props) => {
                     rel="stylesheet"
                 />
             </Head>
-            {router.pathname === '/login' || router.pathname === '/nuevacuenta' ? (
+            
+            {/* {router.pathname === '/login' || router.pathname === '/nuevacuenta' ? (
                 <div className="bg-gray-800 min-h-screen flex flex-col justify-center">
                     <div>Hello</div>
                 </div>
-            ) : (
+            ) : ( */}
                 <div className="bg-gray-200 min-h-screen">
                     <div className="sm:flex min-h-screen">
                         <Sidebar />
 
-                        <main className="sm:w-2/3 xl:w-4/5 sm:min-h-screen p-5">
+                        <main className="sm:w-2/3 xl:w-4/5 sm:min-h-screen">
                             <Header />
                             {props.children}
                         </main>
                     </div>
                 </div>
-            )}
+            {/* )} */}
         </>
     );
 };

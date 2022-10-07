@@ -2,13 +2,13 @@
   {
     "id": 1,
     "platform": "Facebook",
-    "count": 250,
-    "date": "1971-01-22T00:27:58Z"
+    "assign": "Vikram",
+    "status": "In Progress"
   },
   {
     "id": 2,
     "platform": "Instagram",
-    "count": "147",
-    "date": "1971-01-22T00:27:58Z"
+    "assign": "Vikram",
+    "status": "Completed"
   }
 ]

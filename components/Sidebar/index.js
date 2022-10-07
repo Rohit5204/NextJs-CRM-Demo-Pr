@@ -28,28 +28,28 @@ const Sidebar = () => {
                         <a className="text-white block">Platform</a>
                     </Link>
                 </li>
-                <li className={router.pathname === '/master' ? 'bg-blue-800 p-2' : 'p-2'}>
+                {/* <li className={router.pathname === '/master' ? 'bg-blue-800 p-2' : 'p-2'}>
                     <Link href="/master">
                         <a className="text-white block">Master</a>
                     </Link>
-                </li>
+                </li> */}
             </nav>
 
-            {/* <div className="sm:mt-10">
-                <p className="text-white text-2xl font-black">Mastsers</p>
+            <div className="sm:mt-10">
+                <p className="text-white text-2xl font-black">Master</p>
             </div>
             <nav className="mt-5 list-none">
-                <li className={router.pathname === '/bestSellers' ? 'bg-blue-800 p-2' : 'p-2'}>
-                    <Link href="/bestSellers">
-                        <a className="text-white block">Mejores Vendedores</a>
+                <li className={router.pathname === '/master' ? 'bg-blue-800 p-2' : 'p-2'}>
+                    <Link href="/master">
+                        <a className="text-white block" href="/master">System Master</a>
                     </Link>
                 </li>
-                <li className={router.pathname === '/bestClients' ? 'bg-blue-800 p-2' : 'p-2'}>
-                    <Link href="/bestClients">
-                        <a className="text-white block">Mejores Clientes</a>
+                <li className={router.pathname === '/userMaster' ? 'bg-blue-800 p-2' : 'p-2'}>
+                    <Link href="/userMaster">
+                        <a className="text-white block">User Master</a>
                     </Link>
                 </li>
-            </nav> */}
+            </nav>
         </aside>
     );
 };
